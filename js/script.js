@@ -1,6 +1,7 @@
 const date = document.querySelector('#date')
 const myname = document.querySelector('#name')
-console.log(date)
+const playbutton = document.querySelector('#play-btn')
+console.log(playbutton)
 
 
 function getTime() {
@@ -53,9 +54,14 @@ function updateName(e) {
     }
 }
 
+function playSong() {
+    
+}
+
 getTime();
 getName();
 updateBackground();
 
 myname.addEventListener('keypress', updateName);
 myname.addEventListener('blur', updateName);
+playbutton.addEventListener('click', playSong);
