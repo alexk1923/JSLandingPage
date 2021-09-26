@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    background: black url(../img/background.jpg) no-repeat;
+    background-size: cover;
+    color:white;
+}
+
+@mixin button-design{
+    width:2rem;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    padding:2%;
+    margin:0 5%;
+    @media (min-width: 460px) {
+        width: 2.2rem;
+    }
+    @media (min-width: 650px) {
+        width: 2.4rem;
+    }
+    @media (min-width: 1000px) {
+        width: 3.6rem;
+    }
+    @media (min-width: 1800px) {
+        width: 7.4rem;
+
+    }
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: 'Dosis', Verdana, Tahoma, sans-serif, sans-serif;
+
+
+   main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 0, 0, 0.2);
+        min-height: 100vh;
+        .message > *{
+            padding:0.5rem;
+            @media (min-width:460px) {
+                padding:1rem;
+            }
+            @media (min-width: 650px) {
+                font-size: 1.3rem;
+            }
+            @media (min-width:1000px) {
+                padding:2rem;
+            }
+            @media (min-width:1800px) {
+                padding:4rem;
+            }
+        }
+        .message{
+            h1#date{
+                display: block;
+                font-size: 1.72rem;
+                font-weight: 300;
+                @media (min-width: 460px) {
+                    font-size: 2.07rem;
+                }
+                @media (min-width: 650px) {
+                    font-size: 2.98rem;
+                }
+                @media (min-width: 1000px) {
+                    font-size: 4.3rem;
+                }
+                @media (min-width: 1800px) {
+                    font-size: 7.4rem;
+                }
+            }
+            h2{
+                font-size: 1rem;
+                font-weight: 300;
+                display: inline-block;
+                @media (min-width: 460px) {
+                    font-size: 1.2rem;
+                }
+                @media (min-width: 650px) {
+                    font-size: 1.72rem;
+                }
+                @media (min-width: 1000px) {
+                    font-size: 2.48rem;
+                }
+                @media (min-width: 1800px) {
+                    font-size: 4.3rem;
+                }
+            }
+            .music-buttons {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding:0;
+                
+
+                img#music-btn{
+                    @include button-design;
+                }
+                img#music-btn:hover{
+                    @include button-design;
+                    background-color: rgba(255, 255, 255, 0.7);
+                }
+                img#play-btn{
+                    @include button-design;
+
+                }
+
+                img#play-btn:hover{
+                    @include button-design;
+                    background-color: rgba(255, 255, 255, 0.7);
+                }
+            }
+        }
+    }
+
+
+}
