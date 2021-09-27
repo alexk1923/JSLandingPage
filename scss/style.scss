@@ -15,8 +15,8 @@ html{
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid white;
     border-radius: 50%;
-    padding:2%;
-    margin:0 5%;
+    padding:0.1rem;
+    margin:0 0.8rem;
     @media (min-width: 460px) {
         width: 2.2rem;
     }
@@ -124,7 +124,59 @@ body{
                 }
             }
         }
+        .music-container{
+            background-color: rgba(255, 255, 255, 0.8);
+            grid-template-columns: 1fr 1fr 1fr;
+            position: fixed;
+            margin: 5%;
+            width: 100%;
+            height: 90vh;
+            display: none;
+            opacity: 0;
+
+                .music-list{
+                    $current-img-width:3rem;
+                    display:grid;
+                    grid-template-columns: repeat(auto-fill, minmax(calc(#{$current-img-width} + 1rem), 1fr));
+                    img{
+                        @include button-design;
+                        border: 1px solid red;
+                        margin: 1rem;
+                        width:$current-img-width;
+                        @media (min-width: 460px) {
+                            $current-img-width: 3.5rem;
+                        }
+                        @media (min-width: 650px) {
+                            $current-img-width: 4rem;
+                        }
+                        @media (min-width: 1000px) {
+                            $current-img-width: 5rem;
+                        }
+                        @media (min-width: 1800px) {
+                            $current-img-width: 6rem;
+                        }
+                    }
+                }
+        }
+        .music-container-visible {
+            display: block;
+          }
+        .music-container-active {
+            display: block;
+            opacity: 1;
+          }
+        .music-container-transition.music-container-visible {
+            display: block;
+            opacity: 1;
+          }
+        .music-container-transition {
+            transition: opacity 0.5s ease;
+          }
+        .music-container-hidden {
+            display: block;
+            opacity: 0;
+          }  
     }
 
-
 }
+
