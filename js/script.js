@@ -3,6 +3,7 @@ const myname = document.querySelector('#name')
 const playbutton = document.querySelector('#play-btn')
 const musicButton = document.querySelector('#music-btn')
 const musicList = document.querySelector('.music-container')
+const addButton = document.querySelector('#add-btn')
 console.log(playbutton)
 
 
@@ -85,6 +86,10 @@ musicList.addEventListener('transitionend', function() {
 }, false);
 
 
+function getAudio() {
+    
+}
+
 getTime();
 getName();
 updateBackground();
@@ -93,3 +98,4 @@ myname.addEventListener('keypress', updateName);
 myname.addEventListener('blur', updateName);
 playbutton.addEventListener('click', playSong);
 musicButton.addEventListener('click', displayMenu);
+addButton.addEventListener('click', getAudio);
