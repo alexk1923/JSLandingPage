@@ -41,7 +41,7 @@ body main .message > * {
 
 @media (min-width: 460px) {
   body main .message > * {
-    padding: 1rem;
+    padding: 0.7rem;
   }
 }
 
@@ -65,7 +65,7 @@ body main .message > * {
 
 body main .message h1#date {
   display: block;
-  font-size: 1.72rem;
+  font-size: 2.07rem;
   font-weight: 300;
 }
 
@@ -94,7 +94,7 @@ body main .message h1#date {
 }
 
 body main .message h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   display: inline-block;
 }
@@ -145,7 +145,7 @@ body main .message .music-buttons {
 }
 
 body main .message .music-buttons img#music-btn {
-  width: 2rem;
+  width: 2.8rem;
   height: auto;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid white;
@@ -156,30 +156,30 @@ body main .message .music-buttons img#music-btn {
 
 @media (min-width: 460px) {
   body main .message .music-buttons img#music-btn {
-    width: 2.2rem;
+    width: 3rem;
   }
 }
 
 @media (min-width: 650px) {
   body main .message .music-buttons img#music-btn {
-    width: 2.4rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 1000px) {
   body main .message .music-buttons img#music-btn {
-    width: 3.6rem;
+    width: 5rem;
   }
 }
 
 @media (min-width: 1800px) {
   body main .message .music-buttons img#music-btn {
-    width: 7.4rem;
+    width: 6rem;
   }
 }
 
 body main .message .music-buttons img#music-btn:hover {
-  width: 2rem;
+  width: 2.8rem;
   height: auto;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid white;
@@ -191,30 +191,30 @@ body main .message .music-buttons img#music-btn:hover {
 
 @media (min-width: 460px) {
   body main .message .music-buttons img#music-btn:hover {
-    width: 2.2rem;
+    width: 3rem;
   }
 }
 
 @media (min-width: 650px) {
   body main .message .music-buttons img#music-btn:hover {
-    width: 2.4rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 1000px) {
   body main .message .music-buttons img#music-btn:hover {
-    width: 3.6rem;
+    width: 5rem;
   }
 }
 
 @media (min-width: 1800px) {
   body main .message .music-buttons img#music-btn:hover {
-    width: 7.4rem;
+    width: 6rem;
   }
 }
 
 body main .message .music-buttons img#play-btn {
-  width: 2rem;
+  width: 2.8rem;
   height: auto;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid white;
@@ -225,30 +225,30 @@ body main .message .music-buttons img#play-btn {
 
 @media (min-width: 460px) {
   body main .message .music-buttons img#play-btn {
-    width: 2.2rem;
+    width: 3rem;
   }
 }
 
 @media (min-width: 650px) {
   body main .message .music-buttons img#play-btn {
-    width: 2.4rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 1000px) {
   body main .message .music-buttons img#play-btn {
-    width: 3.6rem;
+    width: 5rem;
   }
 }
 
 @media (min-width: 1800px) {
   body main .message .music-buttons img#play-btn {
-    width: 7.4rem;
+    width: 6rem;
   }
 }
 
 body main .message .music-buttons img#play-btn:hover {
-  width: 2rem;
+  width: 2.8rem;
   height: auto;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid white;
@@ -260,49 +260,101 @@ body main .message .music-buttons img#play-btn:hover {
 
 @media (min-width: 460px) {
   body main .message .music-buttons img#play-btn:hover {
-    width: 2.2rem;
+    width: 3rem;
   }
 }
 
 @media (min-width: 650px) {
   body main .message .music-buttons img#play-btn:hover {
-    width: 2.4rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 1000px) {
   body main .message .music-buttons img#play-btn:hover {
-    width: 3.6rem;
+    width: 5rem;
   }
 }
 
 @media (min-width: 1800px) {
   body main .message .music-buttons img#play-btn:hover {
-    width: 7.4rem;
+    width: 6rem;
   }
 }
 
 body main .music-container {
   background-color: rgba(255, 255, 255, 0.8);
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   margin: 5%;
   width: 100%;
-  height: 90vh;
+  height: 40vh;
   display: none;
   opacity: 0;
+}
+
+@media (min-width: 460px) {
+  body main .music-container {
+    -ms-grid-columns: (minmax(calc(4rem + 10px), 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(calc(4rem + 10px), 1fr));
+  }
+}
+
+@media (min-width: 650px) {
+  body main .music-container {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  body main .music-container {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1800px) {
+  body main .music-container {
+    height: 90vh;
+  }
 }
 
 body main .music-container .music-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(calc(3rem + 1rem), 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(calc(3rem + 1rem), 1fr));
+  -ms-grid-columns: (minmax(75px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  justify-items: center;
+}
+
+@media (min-width: 460px) {
+  body main .music-container .music-list {
+    -ms-grid-columns: (minmax(calc(5rem + 20px), 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(calc(5rem + 20px), 1fr));
+  }
+}
+
+@media (min-width: 650px) {
+  body main .music-container .music-list {
+    -ms-grid-columns: (minmax(calc(6rem + 40px), 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(calc(6rem + 40px), 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  body main .music-container .music-list {
+    -ms-grid-columns: (minmax(calc(7rem + 50px), 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(calc(7rem + 50px), 1fr));
+  }
+}
+
+@media (min-width: 1800px) {
+  body main .music-container .music-list {
+    -ms-grid-columns: (minmax(calc(8rem + 100px), 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(calc(8rem + 100px), 1fr));
+  }
 }
 
 body main .music-container .music-list img {
-  width: 2rem;
+  width: 2.8rem;
   height: auto;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid white;
@@ -310,31 +362,55 @@ body main .music-container .music-list img {
   padding: 0.1rem;
   margin: 0 0.8rem;
   border: 1px solid red;
+  width: 4rem;
   margin: 1rem;
-  width: 3rem;
 }
 
 @media (min-width: 460px) {
   body main .music-container .music-list img {
-    width: 2.2rem;
+    width: 3rem;
   }
 }
 
 @media (min-width: 650px) {
   body main .music-container .music-list img {
-    width: 2.4rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 1000px) {
   body main .music-container .music-list img {
-    width: 3.6rem;
+    width: 5rem;
   }
 }
 
 @media (min-width: 1800px) {
   body main .music-container .music-list img {
-    width: 7.4rem;
+    width: 6rem;
+  }
+}
+
+@media (min-width: 460px) {
+  body main .music-container .music-list img {
+    width: 5rem;
+  }
+}
+
+@media (min-width: 650px) {
+  body main .music-container .music-list img {
+    width: 6rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  body main .music-container .music-list img {
+    width: 7rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  body main .music-container .music-list img {
+    width: 8rem;
   }
 }
 
